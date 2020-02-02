@@ -76,7 +76,7 @@ This part will define the overall architecture of the solution. Your task is to 
 ### Infrastructure specifications
 Following the top-level definitions of the architecture, we also have to define how the infrastructure is going to be managed.     
 | Service | Rate of change (per week) | Versioning (optional) | Details | Rollout strategy (optional) | Type
-|---|---|---|---|
+|---|---|---|---|---|---|
 | **infrastructure** | 5 | Yes | | A/B Deployment | IaaC |
 | **load balancer** | 1-2 | No | Should be part of infrastructure code, but supported separately.  | Big Bang Deployment | IaaC |
 | **data** | > 50 | Yes | Storage must not be discarded. Keep logs. Enhance security rules. Reconfigure path rules before swapping with the old version. | Rolling Deployment | SaaC |
