@@ -1,32 +1,30 @@
 #---- Includes
 # Read Python Flask documentation for more in-depth information
 # https://flask.palletsprojects.com/en/1.1.x/#user-s-guide
-from flask import Flask
+import json
+import random
+from flask import Flask, jsonify
 
 #---- App Defs
 # Here we define how our application
 # Please consider using ENV variables for production releases!
-__NAME__ = "SRE Playground Demo API"
+__NAME__ = "SRE PYG - Data Service"
 __HOST__ = "0.0.0.0"
-__PORT__ = "5555"
+__PORT__ = "9876"
+__DATA__ = "data.json"
 __DEBUG__ = False
-__STATIC_FILE_PATH__ = "/static"
 
 # Serve app
-app = Flask(
-    __NAME__,
-    static_url_path=__STATIC_FILE_PATH__
-)
+app = Flask(__NAME__)
 
-#---- Expose path to serve content
-@app.route('/')
-def home():
-    # Override with your custom message
-    return 'Hello World!'
+# Open data file
+with open(__DATA__, encoding='utf-8') as data_file:
+   data = json.loads(data_file.read())
 
-@app.route('/info')
-def info():
-    return app.send_static_file('info.html')
+#---- Expose path to serve random quotes
+@app.route('/api/quote', methods=['GET'])
+def get_quote():
+    return jsonify(random.choice(data))
 
 #---- Main body
 # This part runs the application
