@@ -9,7 +9,7 @@ The goal of this project is to introduce you to basic SRE topics. It was designe
 ## Walkthrough
 We will divide this challenge into multiple stages to ease out the whole process.     
 
-## Design
+## :thought_balloon: Design
 Start by thinking how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. Point of this step is to have a clearer picture on how to proceed, to rule out all the improbable scenarios and major blockers. In this case, try to answer some basic questions.   
 
 *"Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth."* - Sherlock Holmes    
@@ -60,6 +60,6 @@ Before you bought your IKEA furniture, they gave you a pamphlet. On it, you read
 
 ---
 
-## Implementation
+## :computer: Implementation
 ## Improvements
 ## Discussion
