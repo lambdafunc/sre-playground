@@ -68,10 +68,34 @@ This part will define the overall architecture of the solution. Your task is to 
 
 | Service | Model | Networking Type | Port | Paths | Response time | Dependencies | Extras
 |---|---|---|---|---|---|---|---|
-| **data** | container | Internal | 9876 | /api/* | <1000ms | | |
-| **info** | container | Internal | 5555 | /* | <1000ms | data | | |
-| **load balancer** | platform supported  |* External | 80, 443 | / | | info | |
+| **data** | container | Internal | 9876 | /api/* | < 1000ms | | |
+| **info** | container | Internal | 5555 | /* | < 1000ms | data | | |
+| **load balancer** | platform supported  | External | 80, 443 | / | | info | |
 | **monitoring** | optional | | | | | | |
 
-## Improvements
+### Infrastructure specifications
+Following the top-level definitions of the architecture, we also have to define how the infrastructure is going to be managed.     
+| Service | Rate of change (per week) | Versioning (optional) | Details | Rollout strategy (optional) | Type
+|---|---|---|---|
+| **infrastructure** | 5 | Yes | | A/B Deployment | IaaC |
+| **load balancer** | 1-2 | No | Should be part of infrastructure code, but supported separately.  | Big Bang Deployment | IaaC |
+| **data** | > 50 | Yes | Storage must not be discarded. Keep logs. Enhance security rules. Reconfigure path rules before swapping with the old version. | Rolling Deployment | SaaC |
+| **info** | > 50 | Yes | Must support high availability. | Rolling Deployment | SaaC |
+| **monitoring** | 1-2 | Yes | Ensure firewall rules, authentication and authorization. Support only internal networks. | Rolling Deployment | SaaC |
+We would also like to have a way of knowing when the deployments fail or succeed. Find a way to notify the users working on the project about the deployment statuses.
+
+## :checkered_flag: Challenges
+Before you start implementing, fork this repository.     
+
+1) **Dockerization** - Write Dockerfiles for data and info services.
+2) **Environment preparation** - Register a [Google Cloud Platform](https://cloud.google.com/free) free tier account, and create a GCP project.
+3) **Docker configs** - Create a GCP service account that has read and write permissions to the Google Cloud Registry. Set Registry rules to private. Authenticate your service account against Docker.
+4) **Basic CI** - Select an appropriate Continuous Integration tool for your project (refer to [Wiki:Comparison of continuous integration software](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software) for more details). Your pipeline should be push triggered, and should only build docker images for data and info services. Leave some room for extending the pipeline.
+5) **(optional) Pipeline as a Code** - Configure your Pipeline strategy to be code manageable. This step includes configuring the appropriate repo which will serve as a base for extending the pipeline. Reefer to [Pipeline as Code with Jenkins](https://jenkins.io/solutions/pipeline/) for details on how you can utilize Jenkins for this task.
+
+### Code submission
+:warning: When you want to submit your results, please make a merge request.
+
+## :memo: Scoring
+
 ## Discussion
