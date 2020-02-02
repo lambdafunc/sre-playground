@@ -1,6 +1,6 @@
-<div align="center">
-#  :dart: SRE Playground :dart:
-The goal of this project is to introduce you to basic SRE topics. It was designed to give an overview covered by SRE during a whole application life-cycle. 
+<div>
+    <h1 align="center">:dart: SRE Playground</h1>
+<p align="center">The goal of this project is to introduce you to basic SRE topics. It was designed to give an overview covered by SRE during a whole application life-cycle. </p>
 </div>
 
 ## :book: Walkthrough
