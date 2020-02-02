@@ -154,7 +154,8 @@ Visit [Awesome Site Reliability Engineering](https://github.com/dastergon/awesom
 
 ## Author
 
-:bust_in_silhouette: **Ramiz Polic**
+:bust_in_silhouette: **Ramiz Polic**     
+Site Reliability Engineer @ **SAP**
 
 - LinkedIn: [@RamizPolic](https://linkedin.com/in/ramizpolic)
 - Github: [@fhivemind](https://github.com/fhivemind)
