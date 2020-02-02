@@ -92,12 +92,31 @@ Before you start implementing, fork this repository.
 1) **Dockerization** - Write Dockerfiles for data and info services.
 2) **Environment preparation** - Register a [Google Cloud Platform](https://cloud.google.com/free) free tier account, and create a GCP project.
 3) **Docker configs** - Create a GCP service account that has read and write permissions to the Google Cloud Registry. Set Registry rules to private. Authenticate your service account against Docker.
-4) **Basic CI** - Select an appropriate Continuous Integration tool for your project (refer to [Wiki:Comparison of continuous integration software](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software) for more details). Your pipeline should be push triggered, and should only build docker images for data and info services. Leave some room for extending the pipeline.
+4) **Basic CI** - Select an appropriate Continuous Integration tool for your project (refer to [Wiki:Comparison of continuous integration software](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software) for more details). Your pipeline should be either manually or push triggered, and should only consist of step that builds docker images for data and info services. Leave some room for extending the pipeline.
 5) **(optional) Pipeline as a Code** - Configure your Pipeline strategy to be code manageable. This step includes configuring the appropriate repo which will serve as a base for extending the pipeline. Reefer to [Pipeline as Code with Jenkins](https://jenkins.io/solutions/pipeline/) for details on how you can utilize Jenkins for this task.
+6) **Tests** - Write some basic tests to check the functionality of the services. Add the testing stage to your CI pipeline.
+7) **Extending CI pipeline** - Extend your CI pipeline to push the built docker images to Google Cloud Registry. In this step, find a way to use secrets when pushing the images to repo.
+8) **Docker compose** - Write a docker compose file that deploys two services into a service mesh. Be sure to mount the appropriate ports to appropriate services.
+9) **Environment-all** - Update the Python services to use Environment variables instead of hard-coded values. This step will be important (more technically, we will use environment variables when configuring the rollout strategies and mostly abuse them for infrastructure configurations).
+10) **GCP Instance Creation** - Create an instance within your Google Cloud Project. Create a service account within GCP that has read/write access to your instance, and save it. We will use instance for deploying Docker compose service.
+11) **(optional) Infrastructurization** - Familiarize yourself with IaaS tools. Write IaaC solution that will automatically create a GKE Cluster for you. Reefer to [the-ultimate-devops-tool-chest](https://xebialabs.com/the-ultimate-devops-tool-chest/#tool-chest-type) to select appropriate tools (Authors suggestion: Terraform).
+12) **(optional) Kubernetization** - Create Kubernetes deployment scripts for your services.
 
 ### Code submission
 :warning: When you want to submit your results, please make a merge request.
+Populate the following table with the implementation details.     
+
+
+| Service | Tooling | Implementation details | Overview | Links |
+|---|---|---|---|---|
+| SaaC | | | | |
+| IaaC | | | | |
+| CI | | | | |
+| CD | | | | |
+| Monitoring | | | | |
+| Alerting | | | | |
 
 ## :memo: Scoring
+
 
 ## Discussion
