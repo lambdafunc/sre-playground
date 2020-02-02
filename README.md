@@ -61,5 +61,17 @@ Before you bought your IKEA furniture, they gave you a pamphlet. On it, you read
 ---
 
 ## :computer: Implementation
+This part will define the overall architecture of the solution. Your task is to complete the challenges provided below based on the available information.
+
+### Architecture overview
+![Architecture Diagram](diagram.png)
+
+| Service | Model | Networking Type | Port | Paths | Response time | Dependencies | Extras
+|---|---|---|---|---|---|---|---|
+| **data** | container | Internal | 9876 | /api/* | <1000ms | | |
+| **info** | container | Internal | 5555 | /* | <1000ms | data | | |
+| **load balancer** | platform supported  |* External | 80, 443 | / | | info | |
+| **monitoring** | optional | | | | | | |
+
 ## Improvements
 ## Discussion
