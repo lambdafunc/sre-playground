@@ -119,7 +119,7 @@ Before you start implementing, fork this repository.
 To submit your solution, please make a merge request and populate the table with the implementation details.     
 
 | Service | Tooling | Implementation details | Overview | Links | Extra Notes
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | SaaC | | | | | |
 | IaaC | | | | | |
 | CI | | | | | |
