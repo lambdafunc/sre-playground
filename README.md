@@ -51,17 +51,17 @@ Okay, you have assembled your IKEA furniture, but there's a piece you forgot to 
      
      
 #### :grey_question: *Should you know this?*
-One of the big challenges of automation is knowing how to secure your things. When you're developing, you want to isolate the parts that require authorization from the public, and once it has been created, glue it inside of the bigger part without allowing anyone to know how the process had been achieved. In this scenario, you have to integrate the **Secret** controlling mechanisms to strip away all the required private data from the service logic.   
+One of the big challenges of automation is knowing how to secure your things. When you are developing, you want to isolate the parts that require authorization from the public, and once it has been created, glue it inside of the bigger part without allowing anyone to know how the process had been achieved. In this scenario, you have to integrate the **Secret** controlling mechanisms to strip away all the required private data from the service logic.   
 
 > **Example**       
-Accidentally, along your IKEA furniture, you also bought a large Samfrodo TV. After some time, one of the inside electronic pieces went bad, and you're wondering how to fix it. You call Samfrodo company for more information, and they tell how they cannot share any details about that electronic piece. However, they suggest to send you a brand new electronic piece so you can replace it yourself. See [Wiki:Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property).
+Accidentally, along your IKEA furniture, you also bought a large Samfrodo TV. After some time, one of the inside electronic pieces went bad, and you are wondering how to fix it. You call Samfrodo company for more information, and they tell how they cannot share any details about that electronic piece. However, they suggest to send you a brand new electronic piece so you can replace it yourself. See [Wiki:Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property).
      
      
 #### :grey_question: *What if?*
-If you want the solution to be bullet-proof, you have to take into account on how everything is going to behave once it's up and running. These are refereed as **edge-cases**, and a proper solution has to cover them. Your infrastructure is built to serve US West Coast under 100ms, but what do you do for connections from India? It's Black Friday, and suddenly you have 100x higher traffic than usual. Typically, this has to do something with **auto-scaling**, **load balancing**, or **networking**. Your task is now to think of any impossible case scenario in which you infrastructure will fail -- and extend to support it.    
+If you want the solution to be bullet-proof, you have to take into account on how everything is going to behave once It is up and running. These are refereed as **edge-cases**, and a proper solution has to cover them. Your infrastructure is built to serve US West Coast under 100ms, but what do you do for connections from India? It is Black Friday, and suddenly you have 100x higher traffic than usual. Typically, this has to do something with **auto-scaling**, **load balancing**, or **networking**. Your task is now to think of any impossible case scenario in which you infrastructure will fail -- and extend to support it.    
 
 > **Example #1**      
-Your IKEA furniture is a chair. However, you have 10 guests, but only 4 chairs. It's illogical to buy 10 chairs if you have 10 friends coming over only couple of times a month. So, you go and ring your neighbor, asking him to borrow you some chairs, which you will obviously return (I mean, come on, who steals chairs?). You had a nice evening, and tomorrow you return these chairs.     
+Your IKEA furniture is a chair. However, you have 10 guests, but only 4 chairs. It is illogical to buy 10 chairs if you have 10 friends coming over only couple of times a month. So, you go and ring your neighbor, asking him to borrow you some chairs, which you will obviously return (I mean, come on, who steals chairs?). You had a nice evening, and tomorrow you return these chairs.     
 
 > **Example #2**       
 Strangely enough, one of your friends requested to NOT sit on the chair, but instead on the floor. How can he see the top of the table, eat, drink, play, and socialize?
@@ -75,7 +75,7 @@ Remember the IKEA furniture you got? Well, you've been using it for quite some t
      
      
 #### :grey_question: *How good is all this?*
-Whenever you're building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It's commonly refereed as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a buyer, and the service seller.     
+Whenever you are building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It is commonly refereed as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a buyer, and the service seller.     
 
 > **Example**       
 Before you bought your IKEA furniture, they gave you a pamphlet. On it, you read that maximum weight your furniture can hold is 200kg, it can last for 10 years on specific condition, and is designed for a specific purpose. They also stated that if something is wrong or misleading, you can return it.
