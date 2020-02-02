@@ -23,14 +23,14 @@ We will divide this challenge into multiple stages to more closely explain what 
 - [:star: Further references](#star-further-references)
 
 ## :thought_balloon: Design
-Start by thinking how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. Point of this step is to have a clearer picture on how to proceed, to rule out all the improbable scenarios and major blockers. In this step, try to answer some basic questions.   
+Start by thinking about how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. The point of this step is to have a clearer picture of how to proceed, to rule out all the improbable scenarios and major blockers. In this step, try to answer some basic questions.   
 
 *"Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth."* - Sherlock Holmes    
 
 ---
 
 #### :grey_question: *What is the tech-stack?*
-It will give you an idea what technologies you as an SRE should continue with. Remember, you are defining the way how the whole process is going to work. Hence, you need to decide the tools you are going to be working with.     
+It will give you an idea of what technologies you as an SRE should continue with. Remember, you are defining the way how the whole process is going to work. Hence, you need to decide on the tools you are going to be working with.     
 
 > **Example**      
  You bought some IKEA furniture. What tools are you going to use for its assembly?
@@ -47,38 +47,38 @@ Once the IKEA furniture is there, which piece connects to which? Do I need help 
 Here, you need to think in terms of how the whole solution is going to be updated, deleted, recreated, or moved. Most likely, you will have to implement some kind of automated mechanism on how to combat these issues. Notoriously, this is the moment when **Continuous Integration (CI)**, **Continuous Deployment (CD)**, **Anything-as-a-Code (XaaS)**  comes into the picture. They are not your enemy!     
 
 > **Example**       
-Okay, you have assembled your IKEA furniture, but there's a piece you forgot to add. CI allows you to define a way on how to put this piece, or any other piece you might want to add on the needed place. On the other hand, CD allows you to define a way on how to put your IKEA furniture to where you want it -- in the kitchen, living room, hanging from the ceiling, or spying on your neighbors (don't do this). However, you don't want to mess up the whole darn thing, but just a pieces of it. XaaS helps you with just that, isolate a component, and do something with it -- and only that.
+Okay, you have assembled your IKEA furniture, but there's a piece you forgot to add. CI allows you to define a way on how to put this piece, or any other piece you might want to add to the needed place. On the other hand, CD allows you to define a way on how to put your IKEA furniture to where you want it -- in the kitchen, living room, hanging from the ceiling, or spying on your neighbors (don't do this). However, you don't want to mess up the whole darn thing, but just pieces of it. XaaS helps you with just that, isolate a component, and do something with it -- and only that.
      
      
 #### :grey_question: *Should you know this?*
 One of the big challenges of automation is knowing how to secure your things. When you are developing, you want to isolate the parts that require authorization from the public, and once it has been created, glue it inside of the bigger part without allowing anyone to know how the process had been achieved. In this scenario, you have to integrate the **Secret** controlling mechanisms to strip away all the required private data from the service logic.   
 
 > **Example**       
-Accidentally, along your IKEA furniture, you also bought a large Samfrodo TV. After some time, one of the inside electronic pieces went bad, and you are wondering how to fix it. You call Samfrodo company for more information, and they tell how they cannot share any details about that electronic piece. However, they suggest to send you a brand new electronic piece so you can replace it yourself. See [Wiki:Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property).
+Accidentally, along with your IKEA furniture, you also bought a large Samfrodo TV. After some time, one of the inside electronic pieces went bad, and you are wondering how to fix it. You call Samfrodo company for more information, and they tell how they cannot share any details about that electronic piece. However, they suggest to send you a brand new electronic piece so you can replace it yourself. See [Wiki:Intellectual property](https://en.wikipedia.org/wiki/Intellectual_property).
      
      
 #### :grey_question: *What if?*
-If you want the solution to be bullet-proof, you have to take into account on how everything is going to behave once It is up and running. These are refereed as **edge-cases**, and a proper solution has to cover them. Your infrastructure is built to serve US West Coast under 100ms, but what do you do for connections from India? It is Black Friday, and suddenly you have 100x higher traffic than usual. Typically, this has to do something with **auto-scaling**, **load balancing**, or **networking**. Your task is now to think of any impossible case scenario in which you infrastructure will fail -- and extend to support it.    
+If you want the solution to be bullet-proof, you have to take into account on how everything is going to behave once It is up and running. These are referred to as **edge-cases**, and a proper solution has to cover them. Your infrastructure is built to serve US West Coast under 100ms, but what do you do for connections from India? It is Black Friday, and suddenly you have 100x higher traffic than usual. Typically, this has to do something with **auto-scaling**, **load balancing**, or **networking**. Your task is now to think of any impossible case scenario in which your infrastructure will fail -- and extend to support it.    
 
 > **Example #1**      
-Your IKEA furniture is a chair. However, you have 10 guests, but only 4 chairs. It is illogical to buy 10 chairs if you have 10 friends coming over only couple of times a month. So, you go and ring your neighbor, asking him to borrow you some chairs, which you will obviously return (I mean, come on, who steals chairs?). You had a nice evening, and tomorrow you return these chairs.     
+Your IKEA furniture is a chair. However, you have 10 guests, but only 4 chairs. It is illogical to buy 10 chairs if you have 10 friends coming over only a couple of times a month. So, you go and ring your neighbor, asking him to borrow you some chairs, which you will return (I mean, come on, who steals chairs?). You had a nice evening, and tomorrow you return these chairs.     
 
 > **Example #2**       
 Strangely enough, one of your friends requested to NOT sit on the chair, but instead on the floor. How can he see the top of the table, eat, drink, play, and socialize?
      
      
 #### :grey_question: *What is happening?*
-A question you will often ask throughout the whole process. Everything is now operational, you have come this far. But, one of the services is down (perhaps, a like button on Facebook is not counting likes properly), and you don't know what to do. Here, you need to setup the **Monitoring**, **Logging**, and **Observability** services. They help you troubleshoot and see what is happening in realtime. They spew out a lot of unnecessary things, so correctly configuring them will help you manage everything more easily.     
+A question you will often ask throughout the whole process. Everything is now operational, you have come this far. But, one of the services is down (perhaps, a like button on Facebook is not counting likes properly), and you don't know what to do. Here, you need to set up the **Monitoring**, **Logging**, and **Observability** services. They help you troubleshoot and see what is happening in realtime. They spew out a lot of unnecessary things, so correctly configuring them will help you manage everything more easily.     
 
 > **Example**      
 Remember the IKEA furniture you got? Well, you've been using it for quite some time, and you see that some of the pieces are malfunctioning. Logically, you try to determine what's the cause. Hours on end, you figure out the glue is not properly applied. And, you reapply it.
      
      
 #### :grey_question: *How good is all this?*
-Whenever you are building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It is commonly refereed as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a buyer, and the service seller.     
+Whenever you are building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It is commonly referred to as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a buyer and the service seller.     
 
 > **Example**       
-Before you bought your IKEA furniture, they gave you a pamphlet. On it, you read that maximum weight your furniture can hold is 200kg, it can last for 10 years on specific condition, and is designed for a specific purpose. They also stated that if something is wrong or misleading, you can return it.
+Before you bought your IKEA furniture, they gave you a pamphlet. On it, you read that maximum weight your furniture can hold is 200kg, it can last for 10 years on the specific conditions, and is designed for a distinct purpose. They also stated that if something is wrong or misleading, you can return it.
 
 ---
 
@@ -104,7 +104,7 @@ Following the top-level definitions of the architecture, we also have to define 
 | **load balancer** | 1-2 | No | Should be part of infrastructure code, but supported separately. | Big Bang Deployment | IaaC |
 | **data** | > 50 | Yes | Storage must not be discarded. Keep logs. Enhance security rules. Reconfigure path rules before swapping with the old version. | Rolling Deployment | SaaC |
 | **info** | > 50 | Yes | Must support high availability. | Rolling Deployment | SaaC |
-| **monitoring** | 1-2 | Yes | Ensure firewall rules, authentication and authorization. Support only internal networks. | Rolling Deployment | SaaC |
+| **monitoring** | 1-2 | Yes | Ensure firewall rules, authentication, and authorization. Support only internal networks. | Rolling Deployment | SaaC |
 
 We would also like to have a way of knowing when the deployments fail or succeed. Find a way to notify the users working on the project about the deployment statuses.
 
@@ -114,14 +114,14 @@ Before you start implementing, fork this repository.
 1) **Dockerization** - Write Dockerfiles for data and info services.
 2) **Environment preparation** - Register a [Google Cloud Platform](https://cloud.google.com/free) free tier account, and create a GCP project.
 3) **Docker configs** - Create a GCP service account that has read and write permissions to the Google Cloud Registry. Set Registry rules to private. Authenticate your service account against Docker.
-4) **Basic CI** - Select an appropriate Continuous Integration tool for your project (refer to [Wiki:Comparison of continuous integration software](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software) for more details). Your pipeline should be either manually or push triggered, and should only consist of step that builds docker images for data and info services. Leave some room for extending the pipeline.
+4) **Basic CI** - Select an appropriate Continuous Integration tool for your project (refer to [Wiki: Comparison of continuous integration software](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software) for more details). Your pipeline should be either manually or push triggered, and should only consist of a step that builds docker images for data and info services. Leave some room for extending the pipeline.
 5) **(optional) Pipeline as a Code** - Configure your Pipeline strategy to be code manageable. This step includes configuring the appropriate repo which will serve as a base for extending the pipeline. Reefer to [Pipeline as Code with Jenkins](https://jenkins.io/solutions/pipeline/) for details on how you can utilize Jenkins for this task.
 6) **Tests** - Write some basic tests to check the functionality of the services. Add the testing stage to your CI pipeline.
-7) **Extending CI pipeline** - Extend your CI pipeline to push the built docker images to Google Cloud Registry. In this step, find a way to use secrets when pushing the images to repo.
-8) **Docker compose** - Write a docker compose file that deploys two services into a service mesh. Be sure to mount the appropriate ports to appropriate services.
+7) **Extending CI pipeline** - Extend your CI pipeline to push the built docker images to Google Cloud Registry. In this step, find a way to use secrets when pushing the images to the repo.
+8) **Docker-compose** - Write a docker-compose file that deploys two services into a service mesh. Be sure to mount the appropriate ports to appropriate services.
 9) **Environment-all** - Update the Python services to use Environment variables instead of hard-coded values. This step will be important (more technically, we will use environment variables when configuring the rollout strategies and mostly abuse them for infrastructure configurations).
-10) **GCP Instance Creation** - Create an instance within your Google Cloud Project. Create a service account within GCP that has read/write access to your instance, and save it. We will use instance for deploying Docker compose service.
-11) **(optional) Infrastructurization** - Familiarize yourself with IaaS tools. Write IaaC solution that will automatically create a GKE Cluster for you. Reefer to [the-ultimate-devops-tool-chest](https://xebialabs.com/the-ultimate-devops-tool-chest/#tool-chest-type) to select appropriate tools (Authors suggestion: Terraform).
+10) **GCP Instance Creation** - Create an instance within your Google Cloud Project. Create a service account within GCP that has read/write access to your instance, and save it. We will use an instance for deploying Docker compose service.
+11) **(optional) Infrastructurization** - Familiarize yourself with IaaS tools. Write an IaaC solution that will automatically create a GKE Cluster for you. Reefer to [the-ultimate-devops-tool-chest](https://xebialabs.com/the-ultimate-devops-tool-chest/#tool-chest-type) to select appropriate tools (Authors suggestion: Terraform).
 12) **(optional) Kubernetization** - Create Kubernetes deployment scripts for your services.
 > *More challenges will be added...* - Author
 
