@@ -1,16 +1,13 @@
-# SRE Playground
-A list of Site Reliability Engineering challenges for beginners.
+<div align="center">
+#  :dart: SRE Playground :dart:
+The goal of this project is to introduce you to basic SRE topics. It was designed to give an overview covered by SRE during a whole application life-cycle. 
+</div>
 
-# Preface
-The goal of this project is to introduce you to basic SRE topics. It was designed to give an overview covered by SRE during a whole life-cycle. If you have any questions or suggestions, please do not hesitate to contact me via:
-* Email [ramiz.polic@hotmail.com](mailto:ramiz.polic@hotmail.com)
-* Discord [fhivemind#3230](fhivemind#3230).
-
-## Walkthrough
+## :book: Walkthrough
 We will divide this challenge into multiple stages to ease out the whole process.     
 
 ## :thought_balloon: Design
-Start by thinking how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. Point of this step is to have a clearer picture on how to proceed, to rule out all the improbable scenarios and major blockers. In this case, try to answer some basic questions.   
+Start by thinking how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. Point of this step is to have a clearer picture on how to proceed, to rule out all the improbable scenarios and major blockers. In this step, try to answer some basic questions.   
 
 *"Once you eliminate the impossible, whatever remains, no matter how improbable, must be the truth."* - Sherlock Holmes    
 
@@ -101,22 +98,40 @@ Before you start implementing, fork this repository.
 10) **GCP Instance Creation** - Create an instance within your Google Cloud Project. Create a service account within GCP that has read/write access to your instance, and save it. We will use instance for deploying Docker compose service.
 11) **(optional) Infrastructurization** - Familiarize yourself with IaaS tools. Write IaaC solution that will automatically create a GKE Cluster for you. Reefer to [the-ultimate-devops-tool-chest](https://xebialabs.com/the-ultimate-devops-tool-chest/#tool-chest-type) to select appropriate tools (Authors suggestion: Terraform).
 12) **(optional) Kubernetization** - Create Kubernetes deployment scripts for your services.
+> *More challenges will be added...* - Author
 
-### Code submission
-:warning: When you want to submit your results, please make a merge request.
-Populate the following table with the implementation details.     
+### :warning: Code submission
+To submit your solution, please make a merge request and populate the table with the implementation details.     
 
-
-| Service | Tooling | Implementation details | Overview | Links |
+| Service | Tooling | Implementation details | Overview | Links | Extra Notes
 |---|---|---|---|---|
-| SaaC | | | | |
-| IaaC | | | | |
-| CI | | | | |
-| CD | | | | |
-| Monitoring | | | | |
-| Alerting | | | | |
+| SaaC | | | | | |
+| IaaC | | | | | |
+| CI | | | | | |
+| CD | | | | | |
+| Monitoring | | | | | |
+| Alerting | | | | | |
 
 ## :memo: Scoring
+Every implementation will be scored based on the main stages below.
 
+* Automation
+* Security
+* Monitoring
+* Logging
+* Scalability
+* Extendability
 
-## Discussion
+## :star: Further references
+Visit [Awesome Site Reliability Engineering](https://github.com/dastergon/awesome-sre/blob/master/README.md) to find major information about most of the SRE related topics.
+
+---
+
+## Author
+
+:bust_in_silhouette: **Ramiz Polic**
+
+- LinkedIn: [@RamizPolic](https://linkedin.com/in/ramizpolic)
+- Github: [@fhivemind](https://github.com/fhivemind)
+- Discord [fhivemind#3230](https://discordhub.com/profile/fhivemind#3230)
+- Email: [ramiz.polic@hotmail.com](mailto:ramiz.polic@hotmail.com)
