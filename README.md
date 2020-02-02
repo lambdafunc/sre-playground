@@ -74,14 +74,16 @@ This part will define the overall architecture of the solution. Your task is to 
 | **monitoring** | optional | | | | | | |
 
 ### Infrastructure specifications
-Following the top-level definitions of the architecture, we also have to define how the infrastructure is going to be managed.     
-| Service | Rate of change (per week) | Versioning (optional) | Details | Rollout strategy (optional) | Type
+Following the top-level definitions of the architecture, we also have to define how the infrastructure is going to be managed.  
+
+| Service | Rate of change (weekly) | Versioning (optional) | Details | Rollout strategy (optional) | Type |
 |---|---|---|---|---|---|
 | **infrastructure** | 5 | Yes | | A/B Deployment | IaaC |
-| **load balancer** | 1-2 | No | Should be part of infrastructure code, but supported separately.  | Big Bang Deployment | IaaC |
+| **load balancer** | 1-2 | No | Should be part of infrastructure code, but supported separately. | Big Bang Deployment | IaaC |
 | **data** | > 50 | Yes | Storage must not be discarded. Keep logs. Enhance security rules. Reconfigure path rules before swapping with the old version. | Rolling Deployment | SaaC |
 | **info** | > 50 | Yes | Must support high availability. | Rolling Deployment | SaaC |
 | **monitoring** | 1-2 | Yes | Ensure firewall rules, authentication and authorization. Support only internal networks. | Rolling Deployment | SaaC |
+
 We would also like to have a way of knowing when the deployments fail or succeed. Find a way to notify the users working on the project about the deployment statuses.
 
 ## :checkered_flag: Challenges
