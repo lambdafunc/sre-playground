@@ -6,6 +6,21 @@ The goal of this project is to introduce you to basic SRE topics. It was designe
 ## :book: Walkthrough
 We will divide this challenge into multiple stages to ease out the whole process.     
 
+- [:thought_balloon: Design](#thought_balloon-design)
+    - [*What is the tech-stack?*](#grey_question-what-is-the-tech-stack)
+    - [*How does it work?*](#grey_question-how-does-it-work)
+    - [*When, and how often?*](#grey_question-when-and-how-often)
+    - [*What if?*](#grey_question-what-if)
+    - [*What is happening?*](#grey_question-what-is-happening)
+    - [*How good is all this?*](#grey_question-how-good-is-all-this)
+- [:computer: Implementation](#computer-implementation)
+    - [Architecture overview](#architecture-overview)
+    - [Infrastructure specifications](#infrastructure-specifications)
+- [:checkered_flag: Challenges](#checkered_flag-challenges)
+    - [Code submission](#warning-code-submission)
+    - [Scoring](#memo-scoring)
+- [:star: Further references](#star-further-references)
+
 ## :thought_balloon: Design
 Start by thinking how the whole infrastructure can be deployed, maintained, monitored, discarded, extended, or automated. Point of this step is to have a clearer picture on how to proceed, to rule out all the improbable scenarios and major blockers. In this step, try to answer some basic questions.   
 
