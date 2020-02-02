@@ -138,7 +138,7 @@ To submit your solution, please make a merge request and populate the table with
 | Alerting | | | | | |
 
 ## :memo: Scoring
-Every implementation will be scored based on the main stages below.
+Every implementation will be scored based on the criterias below.
 
 * Automation
 * Security
