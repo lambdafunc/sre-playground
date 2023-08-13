@@ -46,7 +46,7 @@ If you want the solution to be bullet-proof, you have to take into account on ho
 A question you will often ask throughout the whole process. Everything is now operational, you have come this far. But, one of the services is down (perhaps, a like button on Facebook is not counting likes properly), and you don't know what to do. Here, you need to set up the **Monitoring**, **Logging**, and **Observability** services. They help you troubleshoot and see what is happening in realtime. They spew out a lot of unnecessary things, so correctly configuring them will help you manage everything more easily.       
      
 #### :grey_question: *How good is all this?*
-Whenever you are building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It is commonly referred to as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a buyer and the service seller.     
+Whenever you are building something, you need to know how well it behaves. This part is focused on answering how your infrastructure is doing, health and functional -wise. It is commonly referred to as **Service Level Agreement (SLA)** which works based on **Service Level Indicators (SLI)**. They depict legal requirements and arrangements between a user and the service provider.     
 
 ---
 
